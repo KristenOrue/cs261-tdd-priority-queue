@@ -8,3 +8,9 @@ class Job:
         self.priority = value
         self.message = data
 
+    def __eq__(self, job):
+        if self.priority == job.priority:
+             return True
+        else:
+             return False
+
