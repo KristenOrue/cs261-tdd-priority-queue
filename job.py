@@ -4,4 +4,7 @@
 
 class Job:
 
-    pass
+    def __init__(self, value = None, data = None):
+        self.priority = value
+        self.message = data
+

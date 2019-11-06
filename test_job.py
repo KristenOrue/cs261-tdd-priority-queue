@@ -21,39 +21,39 @@ class TestJob(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate Job.")
 
-    # def test_default_attributes(self):
-    #     """
-    #     A default Job has a priority and message that are None.
-    #     """
-    #     j = Job()
-    #     self.assertEqual(None, j.priority)
-    #     self.assertEqual(None, j.message)
+    def test_default_attributes(self):
+        """
+        A default Job has a priority and message that are None.
+        """
+        j = Job()
+        self.assertEqual(None, j.priority)
+        self.assertEqual(None, j.message)
 
 
-    # def test_attributes(self):
-    #     """
-    #     A Job is instantiated with a priority and a message.
-    #     """
-    #     j = Job(23, "Fake message")
-    #     self.assertEqual(23, j.priority)
-    #     self.assertEqual("Fake message", j.message)
+    def test_attributes(self):
+        """
+        A Job is instantiated with a priority and a message.
+        """
+        j = Job(23, "Fake message")
+        self.assertEqual(23, j.priority)
+        self.assertEqual("Fake message", j.message)
 
     """
     Comparisons. A larger priority value indicates a higher priority.
     Hint: Investigate how to override Python comparison operators.
     """
 
-    # def test_eq(self):
-    #     """
-    #     Jobs with equivalent priorities are equal to each other.
-    #     """
-    #     first = Job(1, "Fake message")
-    #     second = Job(1, "Don't care about the message")
-    #     third = Job(3, "Don't care about the message")
-    #     self.assertTrue(first == second)
-    #     self.assertTrue(second == first)
-    #     self.assertFalse(first == third)
-    #     self.assertFalse(second == third)
+    def test_eq(self):
+        """
+        Jobs with equivalent priorities are equal to each other.
+        """
+        first = Job(1, "Fake message")
+        second = Job(1, "Don't care about the message")
+        third = Job(3, "Don't care about the message")
+        self.assertTrue(first == second)
+        self.assertTrue(second == first)
+        self.assertFalse(first == third)
+        self.assertFalse(second == third)
 
     # def test_lt(self):
     #     """
