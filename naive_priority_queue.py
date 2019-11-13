@@ -4,4 +4,14 @@
 
 class NaivePriorityQueue:
 
-    pass
+ def __init__(self):
+     self.data = []
+
+def enqueue(self,job):
+    self.data.append(job)
+
+def dequeue(self):
+    if self.is_empty():
+        return None
+    else:
+        

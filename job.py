@@ -13,4 +13,9 @@ class Job:
              return True
         else:
              return False
+    def __gt__(self, job):
+        return self.priority > other.priority
+
+    def __lt__(self, job):
+        return self.priority < other.priority 
 
